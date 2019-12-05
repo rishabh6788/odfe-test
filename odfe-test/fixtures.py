@@ -1,6 +1,4 @@
 from pytest import fixture
-import os
-from subprocess import run
 import requests
 
 es_url = 'https://localhost:9200/'
