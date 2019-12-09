@@ -1,11 +1,12 @@
 from pytest import fixture
 import requests
-import random, string
+import string
 from test_data import *
 import json
+import random
 
 es_url = 'https://localhost:9200/'
-index_name = ''.join(random.choices(string.ascii_lowercase, k=7))
+index_name = ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(8))
 print(index_name)
 
 @fixture()
